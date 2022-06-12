@@ -1,0 +1,82 @@
+/*
+
+ <!--------------------Our Project most used Colors-------------------!>
+
+Text Color: #e7f7ff
+Background Color 1: #06151d
+BAckground Color 2: #03314948
+Color: #1793d1
+
+*/
+
+
+
+body{
+    background-color: #06151d;
+    color: #1793d1;
+    font-family: 'Lucida Console';
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.loadingBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 170px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background-color: #03314948;
+    border: 3px solid #1793d1;
+}
+.loadingBoxTitle{
+    color: #e7f7ff;
+    font-size: 70px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.loadingProgressBar{
+    width: 496px;
+    height: 40px;
+    box-sizing: border-box;
+    background: #03314948;
+}
+.loadingProgress{
+    width: 200px;
+    height: 40px;
+    background: #1793d1;
+}
+
+.loadingPercent{
+    position: absolute;
+    left: 45%;
+    color: #e7f7ff;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 21px;
+}
+
+
+.box-blink{
+    animation: blink .7s ease-in-out.1s;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .2;
+    }
+    0%{
+        opacity: 1;
+    }
+}

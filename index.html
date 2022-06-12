@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="loadingBox">
+        <div class="loadingBoxTitle">Loading...</div>
+        <div class="loadingPercent"></div>
+        <div class="loadingProgressBar">
+            <div class="loadingProgress">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var title = document.querySelector('.loadingBoxTitle');
+        var box = document.querySelector('.loadingBox');
+        var percent = document.querySelector('.loadingPercent');
+        var progress = document.querySelector('.loadingProgress');
+
+
+        var count = 4;
+        var per = 16;
+        var loading = setInterval(animate, 100);
+
+        function animate(){
+            if(count == 100 && per == 496){
+                title.textContent = 'lets go...';
+                box.classList.add('box-blink');
+                clearInterval(loading);
+            }else{
+                count +=1;
+                per+=5;
+                percent.textContent = count + '%';
+                progress.style.width = per + 'px';
+            }
+        }
+
+    </script>
+</body>
+</html>
